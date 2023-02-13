@@ -44,13 +44,19 @@ class Scanner(object):
         
         
         with open('data.json', 'w') as data_file:
+            data_file.write('{\n')
             
             for line in data:
-                line = str(line)
+                
+                line = str(line + ',\n')
                 
                 data_file.write(line)
                 
+            data_file.write('\n}')
+                
         data_file.close()
+        
+            
 
 
 if __name__ == '__main__':
