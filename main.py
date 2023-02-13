@@ -38,10 +38,7 @@ class Scanner(object):
                 
                 root = os.path.normpath(root)
                 
-                cursor['object']['found']['root'] = root
-                cursor['object']['found']['dirs'] = dirs
-                cursor['object']['found']['files'] = files
-                
+                cursor['object']['found']['root'], cursor['object']['found']['dirs'], cursor['object']['found']['files'] = root, dirs, files
                 
                 data.append(json.dumps(cursor, indent = 4, sort_keys = True))
         
